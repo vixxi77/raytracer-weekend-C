@@ -1,11 +1,11 @@
-#include <stdio.h>
+#include <iostream>
 
 int main(){
 
 	int image_width = 256;
 	int image_height = 256;
 
-	printf("P3\n%d %d\n255\n", image_width, image_height);
+	std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
 	for(int i = 0; i < image_height; i++){
 		for(int j = 0; j < image_width; j++){
@@ -16,8 +16,8 @@ int main(){
 			int ir = (int)(255.999 * r);
 			int ig = (int)(255.999 * g);
 			int ib = (int)(255.999 * b);
-			
-			printf("%d %d %d\n", ir, ig, ib);
+		
+			std::cout << ir << ' ' << ig << ' ' << ib << '\n';
 		}
 	}
 }
